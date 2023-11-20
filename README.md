@@ -2,6 +2,8 @@
 
 ## Compiled views outside of grails-app folder not included in views.properties
 
+https://github.com/grails/grails-gradle-plugin/issues/257
+
 Previously worked prior to Grails 6.1.0
 
 Demo
