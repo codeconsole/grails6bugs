@@ -12,11 +12,12 @@ git clone https://github.com/codeconsole/grails6bugs
 cd grails6bugs
 ./gradlew clean bootJar
 # notice src/main/webapp/test/hello.gsp was correctly compiled
-unzip -l build/libs/grails6bugs-0.1.jar|grep index_gsp
-unzip -p build/libs/grails6bugs-0.1.jar BOOT-INF/classes/gsp/views.properties
+unzip -l build/libs/grails6bugs-0.1.jar|grep hello_gsp\.class
+# notice hello.gsp is missing from views.properties
+unzip -p build/libs/grails6bugs-0.1.jar BOOT-INF/classes/gsp/views.properties|grep hello_gsp
 ```
 
-Notice `/test/hello.gsp` gsp in views.properties
+Notice `/test/hello.gsp` gsp is missing in views.properties
 ```
 #Precompiled views for grails6bugs
 #Mon Nov 20 10:23:18 CST 2023
@@ -28,7 +29,7 @@ Notice `/test/hello.gsp` gsp in views.properties
 
 Now verify it worked in Grails 6.0.0
 ```
-git checkout 6.0.0
+git checkout fix
 ./gradlew clean bootJar
 unzip -p build/libs/grails6bugs-0.1.jar BOOT-INF/classes/gsp/views.properties
 ```
