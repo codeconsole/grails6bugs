@@ -17,7 +17,7 @@ unzip -l build/libs/grails6bugs-0.1.jar|grep hello_gsp\.class
 unzip -p build/libs/grails6bugs-0.1.jar BOOT-INF/classes/gsp/views.properties|grep hello_gsp
 ```
 
-Notice `/test/hello.gsp` gsp is missing in views.properties
+Notice `/test/hello.gsp` gsp is missing in `/build/gsp-classes/main/gsp/views.properties`
 ```
 #Precompiled views for grails6bugs
 #Mon Nov 20 10:23:18 CST 2023
