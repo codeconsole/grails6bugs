@@ -31,7 +31,7 @@ Now verify it worked in Grails 6.0.0
 ```
 git checkout fix
 ./gradlew clean bootJar
-unzip -p build/libs/grails6bugs-0.1.jar BOOT-INF/classes/gsp/views.properties
+unzip -p build/libs/grails6bugs-0.1.jar BOOT-INF/classes/gsp/views.properties|grep hello_gsp
 ```
 
 Notice `/test/hello.gsp` is now listed 
