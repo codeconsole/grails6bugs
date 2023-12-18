@@ -87,9 +87,11 @@ tasks.withType(Test) {
     systemProperty 'webdriver.chrome.driver', "${System.getenv('CHROMEWEBDRIVER')}/chromedriver"
     systemProperty 'webdriver.gecko.driver', "${System.getenv('GECKOWEBDRIVER')}/geckodriver"
 }
+
 tasks.withType(War).configureEach { War war ->
     war.dependsOn compileGroovyPages
 }
+
 webdriverBinaries {
     chromedriver '110.0.5481.77'
     geckodriver '0.32.2'
